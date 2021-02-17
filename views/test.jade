@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  p id is  #{id}
+  p key is  #{key}
+  p value is  #{value}
+
+  ul#slides.swiper-wrapper
+    each test in tests
+        li.swiper-slide
+         p id is  #{test.id}
+         p key is  #{test.key}
+         p value is  #{test.value}
