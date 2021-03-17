@@ -6,7 +6,8 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var testRouter = require('./routes/test');
+var employeeRouter = require('./routes/employee');
+var skillRouter = require('./routes/skill');
 const initDb = require("./models/db").initDb;
 
 initDb(function (err) {
@@ -47,8 +48,8 @@ app.use(function(req, res, next) {
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/test',testRouter);
-
+app.use('/employee',employeeRouter);
+app.use('/skill',skillRouter);
 
 
 
